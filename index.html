@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaurya Chaturvedi | Frontend Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #8194cb, #224abe);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4e73df;
+    }
+
+    .toggle-dark {
+      cursor: pointer;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4e73df;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    #about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 1rem auto;
+      display: block;
+      border: 4px solid #4e73df;
+    }
+
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .skill, .project {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      flex: 1 1 calc(33.333% - 1.5rem);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .dark-mode .skill, .dark-mode .project {
+      background-color: #1e1e1e;
+    }
+
+    .skill:hover, .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    #resume a {
+      background-color: #4e73df;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    #resume a:hover {
+      background-color: #2e59d9;
+    }
+
+    #contact p {
+      margin: 0.5rem 0;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: inherit;
+      font-size: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 400px;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      padding: 0.75rem;
+      background-color: #4e73df;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .skills, .projects {
+        flex-direction: column;
+      }
+
+      .skill, .project {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shaurya Chaturvedi</h1>
+  <p>Frontend Developer </p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+  <span class="toggle-dark" onclick="toggleDarkMode()" title="Toggle dark mode"><i class="fas fa-moon"></i></span>
+</nav>
+
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <img src="Shaurya2.jpeg" alt="Shaurya Photo" />
+  <p>Hello! I'm Shaurya Chaturvedi, a frontend web developer dedicated to transforming designs into responsive, accessible, and engaging websites. I enjoy creating intuitive UIs using modern technologies like HTML5, CSS3, JavaScript, and React.js. With a strong foundation in web standards and continuous learning, I aim to build digital solutions that make a difference.</p>
+</section>
+
+<section id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML5 & CSS3</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React.js</div>
+    <div class="skill">Git & GitHub</div>
+    <div class="skill">Responsive Design</div>
+    <div class="skill">MySQL</div>
+  </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="PFSS.png" alt="Portfolio Website Screenshot" />
+      <h3>Portfolio Website</h3>
+      <p>Designed and developed a personal portfolio to showcase skills and projects using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <img src="weather-app-icons.jpg" alt="Weather App Screenshot" />
+      <h3>Weather App</h3>
+      <p>Created a real-time weather application using the OpenWeatherMap API and JavaScript with responsive UI.</p>
+    </div>
+    <div class="project">
+      <img src="TM.png" alt="Task Manager Screenshot" />
+      <h3>Task Manager</h3>
+      <p>A functional to-do application built with vanilla JS and localStorage for persistent task tracking and UI customization.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resume" data-aos="fade-up">
+  <h2>Resume</h2>
+  <p>You can download my resume below:</p>
+  <a href="ShauryaResume.pdf" download>Download Resume (PDF)</a>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mnnvbovn" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="_replyto" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="form-message" style="margin-top: 1rem; color: green;"></p>
+  <div class="social-icons">
+    <a href="https://github.com/shaurya-chaturvedi" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/shaurya-chaturvedi-41315135b" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:shaurya.yourname@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Shaurya Chaturvedi. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+
+</body>
+</html>
