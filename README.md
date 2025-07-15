@@ -5,7 +5,7 @@ Welcome to my personal portfolio website. This is a simple yet functional space 
 
 ## 🔗 Live Link
 
-> [https://shaurya-chaturvedi.github.io/CODSOFT/](https://shaurya-chaturvedi.github.io/CODSOFT/)
+> [https://shaurya-chaturvedi.github.io/CODSOFT/]( https://shaurya-chaturvedi.github.io/CODSOFT/)
 
 ---
 
